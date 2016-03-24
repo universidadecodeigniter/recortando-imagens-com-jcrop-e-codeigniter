@@ -22,6 +22,9 @@
     <!-- Folha de estilo padrão dos exemplos -->
     <link href="<?=base_url('assets/css/estilo.css')?>" rel="stylesheet">
 
+    <!-- Folha de estilo desse exemplo -->
+    <link href="<?=base_url('assets/css/tutorial.css')?>" rel="stylesheet">
+
     <!--[if lt IE 9]><script src="<?=base_url('assets/js/plugins/ie8-responsive-file-warning.js')?>"></script><![endif]-->
     <script src="<?=base_url('assets/js/plugins/ie-emulation-modes-warning.js')?>"></script>
 
@@ -29,6 +32,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Folha de estilo do plugin jCrop -->
+    <link rel="stylesheet" href="<?=base_url('assets/css/plugins/jquery.Jcrop.css')?>" type="text/css" />
   </head>
 
   <body>
