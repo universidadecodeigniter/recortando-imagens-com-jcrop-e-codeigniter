@@ -4,4 +4,4 @@ Arquivos do tutorial ensinando a fazer corte em imagens usando o plugin jCrop, d
 
 Veja o tutorial em:
 
-http://www.universidadecodeigniter.com.br
+http://www.universidadecodeigniter.com.br/recortando-imagens-com-jcrop-e-codeigniter

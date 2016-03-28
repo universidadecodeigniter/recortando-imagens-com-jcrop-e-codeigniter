@@ -63,7 +63,6 @@ class Base extends CI_Controller {
 				redirect('visualizacao');
 			}
 		}
-
 	}
 
 	private function CalculaPercetual($dimensoes){
