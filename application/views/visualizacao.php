@@ -13,11 +13,25 @@
 				</div>
 				<p><a href="<?=base_url()?>" class="btn btn-success">Nova Imagem</a></p>
 		</div>
+		<?php if($this->session->flashdata('dadosImagem') == TRUE): ?>
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 			<h3>Informações da Imagem</h3>
 			<hr />
-				<?=var_dump($this->session->flashdata('dadosImagem'))?>
+			<ul>
+				<?php foreach($this->session->flashdata('dadosImagem') as $key => $value): ?>
+					<li><strong><?=$key?></strong> => <?=$value?></li>
+				<?php endforeach; ?>
+			</ul>
+			<hr/>
+			<h3>Informações do Recorte</h3>
+			<hr />
+			<ul>
+				<?php foreach($this->session->flashdata('dadosCrop') as $key => $value): ?>
+					<li><strong><?=$key?></strong> => <?=$value?></li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 

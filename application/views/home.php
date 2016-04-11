@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-md-offset-3">
 			<?php if(isset($error)):?>
-				<div class="alert alert-error"><?=$error?></div>
+				<div class="alert alert-warning"><?=$error?></div>
 			<?php endif; ?>
 			<form action="<?=base_url('recortar')?>" method="POST" enctype="multipart/form-data">
 				<div class="form-group">

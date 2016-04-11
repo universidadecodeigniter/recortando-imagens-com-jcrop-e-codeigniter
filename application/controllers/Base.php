@@ -58,8 +58,8 @@ class Base extends CI_Controller {
 			{
 				$urlImagem = base_url('uploads/crops/'.$dadosImagem['file_name']);
 				$this->session->set_flashdata('urlImagem', $urlImagem);
-				$dadosImagem['dados_crop'] = $tamanhos;
 				$this->session->set_flashdata('dadosImagem', $dadosImagem);
+				$this->session->set_flashdata('dadosCrop', $tamanhos);
 				redirect('visualizacao');
 			}
 		}
