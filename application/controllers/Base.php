@@ -28,8 +28,11 @@ class Base extends CI_Controller {
 	public function Recortar(){
 
 		// Configurações para o upload da imagem
+		// Diretório para gravar a imagem
 		$configUpload['upload_path']   = './uploads/';
+		// Tipos de imagem permitidos
 		$configUpload['allowed_types'] = 'jpg|png';
+		// Usar nome de arquivo aleatório, ignorando o nome original do arquivo
 		$configUpload['encrypt_name']  = TRUE;
 
 		// Aplica as configurações para a library upload
@@ -55,13 +58,20 @@ class Base extends CI_Controller {
 			$tamanhos = $this->CalculaPercetual($this->input->post());
 
 			// Define as configurações para o recorte da imagem
+			// Biblioteca a ser utilizada
 			$configCrop['image_library'] = 'gd2';
+			//Path da imagem a ser recortada
 			$configCrop['source_image']  = $dadosImagem['full_path'];
+			// Diretório onde a imagem recortada será gravada
 			$configCrop['new_image']     = './uploads/crops/';
+			// Proporção
 			$configCrop['maintain_ratio']= FALSE;
+			// Qualidade da imagem
 			$configCrop['quality']			 = 100;
+			// Tamanho do recorte
 			$configCrop['width']         = $tamanhos['wcrop'];
 			$configCrop['height']        = $tamanhos['hcrop'];
+			// Ponto de corte (eixos x e y)
 			$configCrop['x_axis']        = $tamanhos['x'];
 			$configCrop['y_axis']        = $tamanhos['y'];
 
